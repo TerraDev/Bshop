@@ -1,0 +1,8 @@
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\bin\Debug\netcoreapp3.1\SpyWire.Model.deps.json
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\bin\Debug\netcoreapp3.1\SpyWire.Model.dll
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\bin\Debug\netcoreapp3.1\SpyWire.Model.pdb
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\SpyWire.Model.AssemblyInfoInputs.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\SpyWire.Model.AssemblyInfo.cs
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\SpyWire.Model.csproj.CoreCompileInputs.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\SpyWire.Model.dll
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\SpyWire.Model.pdb

@@ -1,0 +1,15 @@
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\bin\Debug\netcoreapp3.1\SpyWire.Infrastructure.deps.json
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\bin\Debug\netcoreapp3.1\SpyWire.Infrastructure.runtimeconfig.json
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\bin\Debug\netcoreapp3.1\SpyWire.Infrastructure.runtimeconfig.dev.json
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\bin\Debug\netcoreapp3.1\SpyWire.Infrastructure.dll
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\bin\Debug\netcoreapp3.1\SpyWire.Infrastructure.pdb
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\bin\Debug\netcoreapp3.1\SpyWire.Model.dll
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\bin\Debug\netcoreapp3.1\SpyWire.Model.pdb
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.csprojAssemblyReference.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.AssemblyInfoInputs.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.AssemblyInfo.cs
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.csproj.CoreCompileInputs.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.csproj.CopyComplete
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.dll
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.pdb
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Infrastructure\obj\Debug\netcoreapp3.1\SpyWire.Infrastructure.genruntimeconfig.cache

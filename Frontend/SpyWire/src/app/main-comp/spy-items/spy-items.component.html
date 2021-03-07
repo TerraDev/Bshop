@@ -1,0 +1,21 @@
+<p>spy-items works!</p>
+
+<div class="row">
+
+  <div *ngFor="let Item of itemService.Itemlist"
+     class="col-lg-3 col-md-4 col-6" style="padding: 0px; background-color: aqua;">
+
+    <div class="card" style="width:250px; height:100%; margin: 0 auto">
+        <img class="card-img-top" src="../../../assets/img_avatar1.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{Item.name}}</h4>
+          <p class="card-text">{{Item.type}}</p>
+          <p class="card-text">{{Item.description}}</p>
+          <p class="card-text">{{Item.price}}</p>
+          <p class="card-text">{{Item.ownerName}}</p>
+          <button class="btn btn-primary" (click)="PopulateForm(Item)" type="button" data-toggle="modal" data-target="#CreateItem">Update item</button>
+          <button class="btn btn-danger" (click)="onDelete(Item.id)">Delete item</button>
+        </div>
+    </div>
+  </div>
+</div>

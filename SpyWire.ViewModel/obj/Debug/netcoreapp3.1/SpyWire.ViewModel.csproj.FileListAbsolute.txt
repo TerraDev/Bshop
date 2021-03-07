@@ -1,0 +1,9 @@
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\bin\Debug\netcoreapp3.1\SpyWire.ViewModel.deps.json
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\bin\Debug\netcoreapp3.1\SpyWire.ViewModel.dll
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\bin\Debug\netcoreapp3.1\SpyWire.ViewModel.pdb
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\obj\Debug\netcoreapp3.1\SpyWire.ViewModel.csprojAssemblyReference.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\obj\Debug\netcoreapp3.1\SpyWire.ViewModel.AssemblyInfoInputs.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\obj\Debug\netcoreapp3.1\SpyWire.ViewModel.AssemblyInfo.cs
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\obj\Debug\netcoreapp3.1\SpyWire.ViewModel.csproj.CoreCompileInputs.cache
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\obj\Debug\netcoreapp3.1\SpyWire.ViewModel.dll
+F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.ViewModel\obj\Debug\netcoreapp3.1\SpyWire.ViewModel.pdb
