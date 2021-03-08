@@ -525,19 +525,19 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Swashbuckle.AspNetCore/6.0.7": {
+      "Swashbuckle.AspNetCore/6.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
-          "Swashbuckle.AspNetCore.Swagger": "6.0.7",
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.0.7",
-          "Swashbuckle.AspNetCore.SwaggerUI": "6.0.7"
+          "Swashbuckle.AspNetCore.Swagger": "6.1.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.1.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.1.0"
         },
         "build": {
           "build/Swashbuckle.AspNetCore.props": {}
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/6.0.7": {
+      "Swashbuckle.AspNetCore.Swagger/6.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.2.3"
@@ -552,10 +552,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Swashbuckle.AspNetCore.SwaggerGen/6.0.7": {
+      "Swashbuckle.AspNetCore.SwaggerGen/6.1.0": {
         "type": "package",
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "6.0.7"
+          "Swashbuckle.AspNetCore.Swagger": "6.1.0"
         },
         "compile": {
           "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
@@ -564,7 +564,7 @@
           "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
         }
       },
-      "Swashbuckle.AspNetCore.SwaggerUI/6.0.7": {
+      "Swashbuckle.AspNetCore.SwaggerUI/6.1.0": {
         "type": "package",
         "compile": {
           "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
@@ -1532,57 +1532,57 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "SpyWire.Infrastructure/1.0.0": {
+      "BShop.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "BShop.Model": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.3",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.3",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3",
-          "SpyWire.Model": "1.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3"
         },
         "compile": {
-          "bin/placeholder/SpyWire.Infrastructure.dll": {}
+          "bin/placeholder/BShop.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SpyWire.Infrastructure.dll": {}
+          "bin/placeholder/BShop.Infrastructure.dll": {}
         }
       },
-      "SpyWire.Model/1.0.0": {
+      "BShop.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.3"
         },
         "compile": {
-          "bin/placeholder/SpyWire.Model.dll": {}
+          "bin/placeholder/BShop.Model.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SpyWire.Model.dll": {}
+          "bin/placeholder/BShop.Model.dll": {}
         }
       },
-      "SpyWire.Service/1.0.0": {
+      "BShop.Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "SpyWire.Infrastructure": "1.0.0",
-          "SpyWire.ViewModel": "1.0.0"
+          "BShop.Infrastructure": "1.0.0",
+          "BShop.ViewModel": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/SpyWire.Service.dll": {}
+          "bin/placeholder/BShop.Service.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SpyWire.Service.dll": {}
+          "bin/placeholder/BShop.Service.dll": {}
         }
       },
-      "SpyWire.ViewModel/1.0.0": {
+      "BShop.ViewModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
-          "bin/placeholder/SpyWire.ViewModel.dll": {}
+          "bin/placeholder/BShop.ViewModel.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SpyWire.ViewModel.dll": {}
+          "bin/placeholder/BShop.ViewModel.dll": {}
         }
       }
     }
@@ -2428,22 +2428,22 @@
         "runtime.native.system.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore/6.0.7": {
-      "sha512": "Txpe0oaLHrbGYajEVMLlgbnE3MMXyfqmzlf3eD/N5sqyXHN11eFkL6oq6weEoRkAq/+dvLzh5EKR5ZHTKI+bUA==",
+    "Swashbuckle.AspNetCore/6.1.0": {
+      "sha512": "IPW7hzn4HF01d73uSUgbUWYXqkYEANm9f3/TPPi9hgA8i3+KvcZ9uwMXVneK4eU12QR0dOaeFyZBIBb4JwQh+A==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore/6.0.7",
+      "path": "swashbuckle.aspnetcore/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Swashbuckle.AspNetCore.props",
-        "swashbuckle.aspnetcore.6.0.7.nupkg.sha512",
+        "swashbuckle.aspnetcore.6.1.0.nupkg.sha512",
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.Swagger/6.0.7": {
-      "sha512": "gNSfl9GezGQF6lVrQik4WRMR1cOfLDk58+7Dq1UcFx3llLmIxOhzfCszH9lpiuxGDd+e3efBTOocpR/OYO9z0w==",
+    "Swashbuckle.AspNetCore.Swagger/6.1.0": {
+      "sha512": "3L/k/RrB9nQIoddQ2Syi+PFQcebW1g7bjOEV1xrhgcbr4owS2oetouiVLIegmUBcg3DE/MWOqIT63zTceTXi0g==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/6.0.7",
+      "path": "swashbuckle.aspnetcore.swagger/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2456,14 +2456,14 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "swashbuckle.aspnetcore.swagger.6.0.7.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.6.1.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swagger.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerGen/6.0.7": {
-      "sha512": "J6TM1oj01pAHsIu0fNEMuUjBZoEvxt9+m9bRXZZM+u5Hnxb+aVYviclhhVIgbORy3SCr3n4++M47uc8TVSubbw==",
+    "Swashbuckle.AspNetCore.SwaggerGen/6.1.0": {
+      "sha512": "INX2yTXvk3YBPzR0NqCr23Z/UJl/q68fm2WIwB8mDxU3UfnMtea7GEdG/5/Jvz4mbDKDfpryfk9NrEj7tWPdWg==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/6.0.7",
+      "path": "swashbuckle.aspnetcore.swaggergen/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2476,14 +2476,14 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "swashbuckle.aspnetcore.swaggergen.6.0.7.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.6.1.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggergen.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerUI/6.0.7": {
-      "sha512": "zf1k5ZK962nKFtnDixm7tAWzUbXatxckBseAcPeeylXIY48W1K6EUMaIJkCbT+GTTMzCxqppXnIBShZz671k3Q==",
+    "Swashbuckle.AspNetCore.SwaggerUI/6.1.0": {
+      "sha512": "JdItBvuC3oKkf9PW1o/Ad1fP4Z31GpLYfBTKBtPstGtg7Sc85Vqtf4mhd3B/z0GJuGLQYInpWL1It2/0yzLVVA==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/6.0.7",
+      "path": "swashbuckle.aspnetcore.swaggerui/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2496,7 +2496,7 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "swashbuckle.aspnetcore.swaggerui.6.0.7.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.6.1.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
@@ -5720,36 +5720,36 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "SpyWire.Infrastructure/1.0.0": {
+    "BShop.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../SpyWire.Infrastructure/SpyWire.Infrastructure.csproj",
-      "msbuildProject": "../SpyWire.Infrastructure/SpyWire.Infrastructure.csproj"
+      "path": "../SpyWire.Infrastructure/BShop.Infrastructure.csproj",
+      "msbuildProject": "../SpyWire.Infrastructure/BShop.Infrastructure.csproj"
     },
-    "SpyWire.Model/1.0.0": {
+    "BShop.Model/1.0.0": {
       "type": "project",
-      "path": "../SpyWire.Model/SpyWire.Model.csproj",
-      "msbuildProject": "../SpyWire.Model/SpyWire.Model.csproj"
+      "path": "../SpyWire.Model/BShop.Model.csproj",
+      "msbuildProject": "../SpyWire.Model/BShop.Model.csproj"
     },
-    "SpyWire.Service/1.0.0": {
+    "BShop.Service/1.0.0": {
       "type": "project",
-      "path": "../SpyWire.Service/SpyWire.Service.csproj",
-      "msbuildProject": "../SpyWire.Service/SpyWire.Service.csproj"
+      "path": "../SpyWire.Service/BShop.Service.csproj",
+      "msbuildProject": "../SpyWire.Service/BShop.Service.csproj"
     },
-    "SpyWire.ViewModel/1.0.0": {
+    "BShop.ViewModel/1.0.0": {
       "type": "project",
-      "path": "../SpyWire.ViewModel/SpyWire.ViewModel.csproj",
-      "msbuildProject": "../SpyWire.ViewModel/SpyWire.ViewModel.csproj"
+      "path": "../SpyWire.ViewModel/BShop.ViewModel.csproj",
+      "msbuildProject": "../SpyWire.ViewModel/BShop.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BShop.Infrastructure >= 1.0.0",
+      "BShop.Service >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.3",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
-      "SpyWire.Infrastructure >= 1.0.0",
-      "SpyWire.Service >= 1.0.0",
-      "Swashbuckle.AspNetCore >= 6.0.7"
+      "Swashbuckle.AspNetCore >= 6.1.0"
     ]
   },
   "packageFolders": {
@@ -5759,11 +5759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\SpyWire.csproj",
-      "projectName": "SpyWire",
-      "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\SpyWire.csproj",
+      "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\BShop.csproj",
+      "projectName": "BShop",
+      "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\BShop.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\obj\\",
+      "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5783,11 +5783,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj": {
-              "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj"
+            "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj": {
+              "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj"
             },
-            "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj": {
-              "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj"
+            "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj": {
+              "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj"
             }
           }
         }
@@ -5822,7 +5822,7 @@
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
-            "version": "[6.0.7, )"
+            "version": "[6.1.0, )"
           }
         },
         "imports": [

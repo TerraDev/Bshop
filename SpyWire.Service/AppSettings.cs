@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpyWire.Service
+namespace BShop.Service
 {
     public class AppSettings
     {

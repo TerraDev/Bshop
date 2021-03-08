@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpyWire.ViewModel
+namespace BShop.ViewModel
 {
     public class LoginViewModel
     {

@@ -178,8 +178,8 @@
               "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj": {
                 "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj"
               },
-              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj": {
-                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj"
+              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\BShop.ViewModel.csproj": {
+                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\BShop.ViewModel.csproj"
               }
             }
           }
@@ -212,12 +212,12 @@
         }
       }
     },
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj": {
+    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\BShop.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj",
-        "projectName": "SpyWire.ViewModel",
-        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj",
+        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\BShop.ViewModel.csproj",
+        "projectName": "BShop.ViewModel",
+        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\BShop.ViewModel.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\obj\\",
         "projectStyle": "PackageReference",

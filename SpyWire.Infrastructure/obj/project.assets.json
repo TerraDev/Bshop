@@ -1572,17 +1572,17 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "SpyWire.Model/1.0.0": {
+      "BShop.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.3"
         },
         "compile": {
-          "bin/placeholder/SpyWire.Model.dll": {}
+          "bin/placeholder/BShop.Model.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SpyWire.Model.dll": {}
+          "bin/placeholder/BShop.Model.dll": {}
         }
       }
     }
@@ -5922,19 +5922,19 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "SpyWire.Model/1.0.0": {
+    "BShop.Model/1.0.0": {
       "type": "project",
-      "path": "../SpyWire.Model/SpyWire.Model.csproj",
-      "msbuildProject": "../SpyWire.Model/SpyWire.Model.csproj"
+      "path": "../SpyWire.Model/BShop.Model.csproj",
+      "msbuildProject": "../SpyWire.Model/BShop.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BShop.Model >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.3",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
-      "SpyWire.Model >= 1.0.0"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3"
     ]
   },
   "packageFolders": {
@@ -5944,11 +5944,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj",
-      "projectName": "SpyWire.Infrastructure",
-      "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj",
+      "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj",
+      "projectName": "BShop.Infrastructure",
+      "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\obj\\",
+      "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5968,8 +5968,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj": {
-              "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj"
+            "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj": {
+              "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kKEjZWiG7HN20yEeB4GiyWF35UBq4hSS9KxgLWOzA2J5Qp58UYvF0JmsM3NRndQSyn1ACwa2CQOHhwu9KDnAtQ==",
+  "dgSpecHash": "6paiDGVCCLFKwDGGeNk6T7s+FwnVr3ea9wM4++QmkVEKLilDjobv/9E6OtVISmgMu0rLzeoNjdYmUkQHNfrfRA==",
   "success": true,
-  "projectFilePath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj",
+  "projectFilePath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.3\\microsoft.aspnetcore.cryptography.internal.5.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",

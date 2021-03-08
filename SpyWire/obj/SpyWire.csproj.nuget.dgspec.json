@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\SpyWire.csproj": {}
+    "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\SpyWire.csproj": {}
   },
   "projects": {
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj": {
+    "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj",
-        "projectName": "SpyWire.Infrastructure",
-        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj",
+        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj",
+        "projectName": "BShop.Infrastructure",
+        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\obj\\",
+        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj": {
-                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj"
+              "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj": {
+                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj": {
+    "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj",
-        "projectName": "SpyWire.Model",
-        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj",
+        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj",
+        "projectName": "BShop.Model",
+        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\obj\\",
+        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -148,14 +148,14 @@
         }
       }
     },
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj": {
+    "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj",
-        "projectName": "SpyWire.Service",
-        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj",
+        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj",
+        "projectName": "BShop.Service",
+        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\obj\\",
+        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -175,11 +175,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj": {
-                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj"
+              "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj": {
+                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj"
               },
-              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj": {
-                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj"
+              "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.ViewModel\\BShop.ViewModel.csproj": {
+                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.ViewModel\\BShop.ViewModel.csproj"
               }
             }
           }
@@ -212,14 +212,14 @@
         }
       }
     },
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj": {
+    "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.ViewModel\\BShop.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj",
-        "projectName": "SpyWire.ViewModel",
-        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj",
+        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.ViewModel\\BShop.ViewModel.csproj",
+        "projectName": "BShop.ViewModel",
+        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.ViewModel\\BShop.ViewModel.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\obj\\",
+        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -269,14 +269,14 @@
         }
       }
     },
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\SpyWire.csproj": {
+    "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\SpyWire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\SpyWire.csproj",
-        "projectName": "SpyWire",
-        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\SpyWire.csproj",
+        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\SpyWire.csproj",
+        "projectName": "BShop",
+        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\SpyWire.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire\\obj\\",
+        "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -296,11 +296,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj": {
-                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Infrastructure\\SpyWire.Infrastructure.csproj"
+              "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj": {
+                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Infrastructure\\BShop.Infrastructure.csproj"
               },
-              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj": {
-                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Service\\SpyWire.Service.csproj"
+              "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj": {
+                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Service\\BShop.Service.csproj"
               }
             }
           }

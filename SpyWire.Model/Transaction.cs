@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace SpyWire.Model
+namespace BShop.Model
 {
     public class Transaction
     {
@@ -24,7 +24,7 @@ namespace SpyWire.Model
         //[InverseProperty("Sold")]
         //public virtual User Seller { get; set; }
 
-        public ICollection<SpyWareItem> SoldItems { get; set; }
+        public ICollection<BShopItem> SoldItems { get; set; }
 
         public DateTime TransactionTime { get; set; }
     }

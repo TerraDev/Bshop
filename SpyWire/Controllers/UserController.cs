@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using SpyWire.Model;
-using SpyWire.Service;
-using SpyWire.ViewModel;
+using BShop.Model;
+using BShop.Service;
+using BShop.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -16,7 +16,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpyWire.Controllers
+namespace BShop.Controllers
 {
     [Route("User/")]
     [ApiController]

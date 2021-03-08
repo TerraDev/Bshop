@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using SpyWire.Model;
+using BShop.Model;
 using System;
 
-namespace SpyWire.Infrastructure
+namespace BShop.Infrastructure
 {
     public class AppDbContext : IdentityDbContext
     {
@@ -12,7 +12,7 @@ namespace SpyWire.Infrastructure
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        public DbSet<SpyWareItem> SpyWareItems { get; set; }
+        public DbSet<BShopItem> SpyWareItems { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
     }
 }

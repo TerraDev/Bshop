@@ -1,12 +1,12 @@
-﻿using SpyWire.ViewModel;
+﻿using BShop.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using SpyWire.Infrastructure;
-using SpyWire.Model;
+using BShop.Infrastructure;
+using BShop.Model;
 
-namespace SpyWire.Service.ItemRepository
+namespace BShop.Service.ItemRepository
 {
     public class ItemRepository : IitemRepository
     {
@@ -20,7 +20,7 @@ namespace SpyWire.Service.ItemRepository
         public List<ItemViewModel> GetAllItems()
         {
             List<ItemViewModel> Livm = new List<ItemViewModel>();
-            foreach(SpyWareItem SWI in ctx.SpyWareItems)
+            foreach(BShopItem SWI in ctx.SpyWareItems)
             {
                 Livm.Add(
                     new ItemViewModel
@@ -38,7 +38,7 @@ namespace SpyWire.Service.ItemRepository
 
         public ItemViewModel GetItem(string id)
         {
-            SpyWareItem SWI = ctx.SpyWareItems.Find(id);
+            BShopItem SWI = ctx.SpyWareItems.Find(id);
             return new ItemViewModel
             {
                 Id = SWI.Id,
@@ -53,7 +53,7 @@ namespace SpyWire.Service.ItemRepository
         public void CreateItem(ItemViewModel Item)
         {
             //get current user and other stuff...
-            ctx.SpyWareItems.Add(new SpyWareItem
+            ctx.SpyWareItems.Add(new BShopItem
             {
                 Name = Item.Name,
                 Price = Item.Price,
@@ -65,7 +65,7 @@ namespace SpyWire.Service.ItemRepository
 
         public void UpdateItem(string id, ItemViewModel Item)
         {
-            SpyWareItem SWI = ctx.SpyWareItems.Find(id);
+            BShopItem SWI = ctx.SpyWareItems.Find(id);
             SWI.Name = Item.Name;
             SWI.Price = Item.Price;
             SWI.Type = Item.Type;
@@ -74,7 +74,7 @@ namespace SpyWire.Service.ItemRepository
 
         public void DeleteItem(string id)
         {
-            SpyWareItem itm = ctx.SpyWareItems.Find(id);
+            BShopItem itm = ctx.SpyWareItems.Find(id);
             //get id of current user
             //if currentUser.Id==Itm.Owner.Id
             //then ->

@@ -31,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj": {
-                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj"
+              "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\BShop.Model.csproj": {
+                "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\BShop.Model.csproj"
               }
             }
           }
@@ -85,12 +85,12 @@
         }
       }
     },
-    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj": {
+    "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\BShop.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj",
-        "projectName": "SpyWire.Model",
-        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj",
+        "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\BShop.Model.csproj",
+        "projectName": "BShop.Model",
+        "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\BShop.Model.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\obj\\",
         "projectStyle": "PackageReference",

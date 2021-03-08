@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SpyWire.Infrastructure;
+using BShop.Infrastructure;
 
-namespace SpyWire.Infrastructure.Migrations
+namespace BShop.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20210304200420_InitIdentityMigr")]

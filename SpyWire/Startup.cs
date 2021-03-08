@@ -12,16 +12,16 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
-using SpyWire.Infrastructure;
-using SpyWire.Service.ItemRepository;
-using SpyWire.Service;
-using SpyWire.Model;
+using BShop.Infrastructure;
+using BShop.Service.ItemRepository;
+using BShop.Service;
+using BShop.Model;
 using Microsoft.AspNetCore.Identity;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
-namespace SpyWire
+namespace BShop
 {
     public class Startup
     {
@@ -39,7 +39,7 @@ namespace SpyWire
 
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(
-            Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("SpyWire.Infrastructure")));
+            Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("BShop.Infrastructure")));
 
             services.AddIdentityCore<ApplicationUser>()
                 .AddEntityFrameworkStores<AppDbContext>();
@@ -59,7 +59,7 @@ namespace SpyWire
 
             services.AddSwaggerGen(
             swagger => swagger.SwaggerDoc(
-            "v1", new OpenApiInfo { Title = "SpyWire API" }));
+            "v1", new OpenApiInfo { Title = "BShop API" }));
 
             services.AddCors();
 
@@ -100,7 +100,7 @@ namespace SpyWire
 
             app.UseSwagger();
             app.UseSwaggerUI(
-                c=>c.SwaggerEndpoint("/swagger/v1/swagger.json", "SpyWire API"));
+                c=>c.SwaggerEndpoint("/swagger/v1/swagger.json", "BShop API"));
 
             app.UseHttpsRedirection();
 

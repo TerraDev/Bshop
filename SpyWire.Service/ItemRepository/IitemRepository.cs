@@ -1,10 +1,10 @@
-﻿using SpyWire.ViewModel;
+﻿using BShop.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpyWire.Service.ItemRepository
+namespace BShop.Service.ItemRepository
 {
     public interface IitemRepository
     {

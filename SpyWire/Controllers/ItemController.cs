@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SpyWire.Service.ItemRepository;
-using SpyWire.ViewModel;
+using BShop.Service.ItemRepository;
+using BShop.ViewModel;
 
-namespace SpyWire.Controllers
+namespace BShop.Controllers
 {
     [ApiController]
     [Route("Item")]

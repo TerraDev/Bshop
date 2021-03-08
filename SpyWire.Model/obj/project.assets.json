@@ -749,11 +749,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj",
-      "projectName": "SpyWire.Model",
-      "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\SpyWire.Model.csproj",
+      "projectUniqueName": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj",
+      "projectName": "BShop.Model",
+      "projectPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\BShop.Model.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.Model\\obj\\",
+      "outputPath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

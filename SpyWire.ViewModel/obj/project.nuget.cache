@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l+8cSOuLyRWXYb84GYwN11WZ381dSLqcZH/6BJOnQIbfuiYndu0jZkNS2st2xhsb/9Q23XR57N9HieGmj1PCjg==",
+  "dgSpecHash": "HurXqDAxyedXqz4NvEF5OpGFv2i+qBoSpNWE+zZNqOqSx7flEdQ2KXOgdWxLdIOE+XyN3FWmcAv8hByYPHyK5Q==",
   "success": true,
-  "projectFilePath": "F:\\Behdad2\\Projects\\ASP CORE\\SpyWire\\SpyWire.ViewModel\\SpyWire.ViewModel.csproj",
+  "projectFilePath": "F:\\Behdad2\\Projects\\ASP CORE\\BShop\\SpyWire.ViewModel\\BShop.ViewModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SpyWire.Infrastructure.Migrations
+namespace BShop.Infrastructure.Migrations
 {
     public partial class Migr2 : Migration
     {

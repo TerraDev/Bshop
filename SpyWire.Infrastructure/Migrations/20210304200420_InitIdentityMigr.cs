@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SpyWire.Infrastructure.Migrations
+namespace BShop.Infrastructure.Migrations
 {
     public partial class InitIdentityMigr : Migration
     {

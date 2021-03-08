@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpyWire", "SpyWire.csproj", "{CB94AF60-E4AB-4E27-B89C-A6DD077F0B29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BShop", "BShop.csproj", "{CB94AF60-E4AB-4E27-B89C-A6DD077F0B29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpyWire.Model", "..\SpyWire.Model\SpyWire.Model.csproj", "{C6C30244-A687-41D2-9D09-3C7CA7701800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BShop.Model", "..\SpyWire.Model\BShop.Model.csproj", "{C6C30244-A687-41D2-9D09-3C7CA7701800}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpyWire.ViewModel", "..\SpyWire.ViewModel\SpyWire.ViewModel.csproj", "{55CFFA69-D226-462D-82DF-E3B066D3376C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BShop.ViewModel", "..\SpyWire.ViewModel\BShop.ViewModel.csproj", "{55CFFA69-D226-462D-82DF-E3B066D3376C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpyWire.Infrastructure", "..\SpyWire.Infrastructure\SpyWire.Infrastructure.csproj", "{FD1E9C91-9DF6-41DD-B940-F3176B015CCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BShop.Infrastructure", "..\SpyWire.Infrastructure\BShop.Infrastructure.csproj", "{FD1E9C91-9DF6-41DD-B940-F3176B015CCC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpyWire.Service", "..\SpyWire.Service\SpyWire.Service.csproj", "{D2A1E13D-E79B-45D8-B33C-4F562EF1A047}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BShop.Service", "..\SpyWire.Service\BShop.Service.csproj", "{D2A1E13D-E79B-45D8-B33C-4F562EF1A047}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
