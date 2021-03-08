@@ -12,6 +12,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { UserComponent } from './main-comp/user/user.component';
 import { UserService } from './shared/user.service';
 import { AuthInterceptor } from './shared/auth.Interceptor';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AuthInterceptor } from './shared/auth.Interceptor';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatTabsModule,
     ToastrModule.forRoot(/*{}*/)
   ],
   providers: [UserService, {

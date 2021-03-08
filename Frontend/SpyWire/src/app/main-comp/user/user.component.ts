@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import{ EventEmitter } from '@angular/core'
 import { ToastrService } from 'ngx-toastr';
@@ -15,6 +15,12 @@ export class UserComponent implements OnInit {
   constructor(public userService:UserService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
+  }
+
+  @Input() SelectedTab: number;
+
+  ngOnChanges(changes: SimpleChanges) {     
+    console.log(changes.SelectedTab.currentValue);
   }
 
   RegisterForm(form : NgForm)

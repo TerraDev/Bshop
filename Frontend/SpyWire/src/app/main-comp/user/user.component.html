@@ -10,29 +10,28 @@
         </div>
         
         <div class="modal-body">
-
-            <div>
-                Register tab
+            <mat-tab-group animationDuration="0ms" [selectedIndex]="SelectedTab">
+                <mat-tab label='Register'>
                 <form #form="ngForm" autocomplete="off" (submit)="RegisterForm(form)">
                   
                 <div class="md-form">
-                  <input type="text" id="formA" class="form-control" name="Userame" #Username="ngModel" [(ngModel)]="userService.UserData.username" required>
                   <label for="formA">Username</label>
+                  <input type="text" id="formA" class="form-control" name="Userame" #Username="ngModel" [(ngModel)]="userService.UserData.username" required>
                 </div>
         
                 <div class="md-form">
-                  <input type="text" id="formB" class="form-control" name="Email" #Email="ngModel" [(ngModel)]="userService.UserData.email" required>
                   <label for="formB">Email</label>
+                  <input type="text" id="formB" class="form-control" name="Email" #Email="ngModel" [(ngModel)]="userService.UserData.email" required>
                 </div>
         
                 <div class="md-form">
-                  <input type="text" id="formC" class="form-control" type="password" name="Password" #Password="ngModel" [(ngModel)]="userService.UserData.password"  required>
                   <label for="formC">Password</label>
+                  <input type="text" id="formC" class="form-control" type="password" name="Password" #Password="ngModel" [(ngModel)]="userService.UserData.password"  required>
                 </div>
         
                 <div class="md-form">
-                  <input type="text" id="formD" class="form-control" type="password" name="ConfirmPassword" #ConfirmPassword="ngModel" [(ngModel)]="userService.UserData.confirmPassword">
                   <label for="formD">Confirm password</label>
+                  <input type="text" id="formD" class="form-control" type="password" name="ConfirmPassword" #ConfirmPassword="ngModel" [(ngModel)]="userService.UserData.confirmPassword">
                 </div>
         
               <div class="text-center">
@@ -40,30 +39,31 @@
               </div>
       
             </form>
-
-        </div>
-
+          </mat-tab>
+        
+          <mat-tab label="Login">
             <div>
-                Login tab
             
           <form #form2="ngForm" autocomplete="off" (submit)="LoginForm(form2)">
             
           <div class="md-form">
-            <input type="text" id="formX" class="form-control" name="UserName" #UserName="ngModel" [(ngModel)]="userService.LoginUserData.userName" required>
             <label for="formX">Username</label>
+            <input type="text" id="formX" class="form-control" name="UserName" #UserName="ngModel" [(ngModel)]="userService.LoginUserData.userName" required>
           </div>
           
           <div class="md-form">
-            <input type="text" id="formY" class="form-control" name="Password" type="password" #Password="ngModel" [(ngModel)]="userService.LoginUserData.password" required>
             <label for="formY">Password</label>
+            <input type="text" id="formY" class="form-control" name="Password" type="password" #Password="ngModel" [(ngModel)]="userService.LoginUserData.password" required>
           </div>
           
             <div class="text-center">
                 <button class="btn btn-deep-purple" [disabled]="form2.invalid">Login</button>
             </div>
             </form>
-        </div>
+          </div>
 
+        </mat-tab>
+        </mat-tab-group>
       </div>
   
         <div class="modal-footer">

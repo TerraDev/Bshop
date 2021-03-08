@@ -11,6 +11,7 @@ export class MainCompComponent implements OnInit {
 
   constructor(public userService:UserService) { }
   CurrentUser;
+  LogRegSelectedTab: number = 0;
 
   ngOnInit(): void {
     //this.ShowUsername();
@@ -24,7 +25,7 @@ export class MainCompComponent implements OnInit {
   }
 
   //Todo: implement interceptor
-  ShowUsername()
+  ShowUsername($event?)
   {
     this.userService.getUserProfile().subscribe(
     res=> {
@@ -36,8 +37,4 @@ export class MainCompComponent implements OnInit {
     })
   }
 
-  ShowUsername2($event)
-  {
-    this.ShowUsername();
-  }
 }

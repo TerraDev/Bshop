@@ -11,10 +11,10 @@
           <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item" ng-If="CurrentUser==null">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#UserModal">Register</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#UserModal" (click)="LogRegSelectedTab=0">Register</a>
         </li>
         <li class="nav-item" ng-If="CurrentUser==null">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#UserModal">Login</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#UserModal" (click)="LogRegSelectedTab=1">Login</a>
         </li>
         <li class="nav-item" *ngIf="CurrentUser">
           <a class="nav-link" >Hi {{CurrentUser.userName}}</a>
@@ -43,4 +43,4 @@
 
   <app-spy-items></app-spy-items>
   <app-add-item></app-add-item>
-  <app-user (LoginEvent)="ShowUsername2($event)"></app-user>
+  <app-user (LoginEvent)="ShowUsername($event)" [SelectedTab]="LogRegSelectedTab"></app-user>
