@@ -5,11 +5,11 @@
 ### this is a work in progress...
 
 Website for ecommerce programmed in ASP.NET CORE 
-5 and Angular11 (originally for selling spyware but can be used for any type of ecommerce)
+5 and Angular11
 
 
 
-click the .sln file on spywire folder to open the back-end
+click the .sln file on BShop folder to open the back-end
 
 
 
