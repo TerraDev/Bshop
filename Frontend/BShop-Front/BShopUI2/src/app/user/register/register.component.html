@@ -1,0 +1,30 @@
+<p>register works!</p>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    Value : {{ registerForm.value | json }}
+
+    <hr>
+    <mat-form-field>
+        <input matInput placeholder="email" formControlName="email" type="email">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="username" formControlName="username">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="password" formControlName="password" type="password">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="confirmPassword" formControlName="confirmPassword" type="password">
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button color="primary" type="submit">Sign up</button>
+
+</form>

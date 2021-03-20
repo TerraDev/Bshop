@@ -1,11 +1,16 @@
 <!--create toolbar-->
 <!--angular material colors are primary-accent-warning-->
-<mat-toolbar color="primary" class="mat-elevation-z6">
-    <span>
-        BShop
-    </span>
+<mat-toolbar color="primary" class="navbar mat-toolbar mat-primary mat-toolbar-single-row">
+        <span>
+             BShop 
+        </span>
+        <div>
+            <a routerLink="/user/login" routerLinkActive="active">login</a>
+            <a routerLink="/user/register" routerLinkActive="active">register</a>
+            <a routerLink="/logout" routerLinkActive="active">logout</a>
+            <a routerLink="/user/profile" routerLinkActive="active">profile</a>
+            <a routerLink="/itempage" routerLinkActive="active">items</a>
+            <input type="search" aria-label="search" placeholder="Search">
+        </div>
 </mat-toolbar>
-
-This is main app
-
-<app-item-page></app-item-page>
+<router-outlet></router-outlet>
