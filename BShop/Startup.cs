@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Identity;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using BShop.Service.TransactionRepository;
 
 namespace BShop
 {
@@ -46,6 +47,7 @@ namespace BShop
 
             services.AddScoped<IitemRepository, ItemRepository>();
             //services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             services.Configure<IdentityOptions>(options =>
             {

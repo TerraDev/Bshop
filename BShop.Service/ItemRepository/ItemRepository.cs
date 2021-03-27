@@ -20,7 +20,7 @@ namespace BShop.Service.ItemRepository
         public List<ItemViewModel> GetAllItems()
         {
             List<ItemViewModel> Livm = new List<ItemViewModel>();
-            foreach(BShopItem SWI in ctx.SpyWareItems)
+            foreach(BShopItem SWI in ctx.BShopItems)
             {
                 Livm.Add(
                     new ItemViewModel
@@ -38,7 +38,7 @@ namespace BShop.Service.ItemRepository
 
         public ItemViewModel GetItem(string id)
         {
-            BShopItem SWI = ctx.SpyWareItems.Find(id);
+            BShopItem SWI = ctx.BShopItems.Find(id);
             return new ItemViewModel
             {
                 Id = SWI.Id,
@@ -53,7 +53,7 @@ namespace BShop.Service.ItemRepository
         public void CreateItem(ItemViewModel Item)
         {
             //get current user and other stuff...
-            ctx.SpyWareItems.Add(new BShopItem
+            ctx.BShopItems.Add(new BShopItem
             {
                 Name = Item.Name,
                 Price = Item.Price,
@@ -65,7 +65,7 @@ namespace BShop.Service.ItemRepository
 
         public void UpdateItem(string id, ItemViewModel Item)
         {
-            BShopItem SWI = ctx.SpyWareItems.Find(id);
+            BShopItem SWI = ctx.BShopItems.Find(id);
             SWI.Name = Item.Name;
             SWI.Price = Item.Price;
             SWI.Type = Item.Type;
@@ -74,11 +74,11 @@ namespace BShop.Service.ItemRepository
 
         public void DeleteItem(string id)
         {
-            BShopItem itm = ctx.SpyWareItems.Find(id);
+            BShopItem itm = ctx.BShopItems.Find(id);
             //get id of current user
             //if currentUser.Id==Itm.Owner.Id
             //then ->
-            ctx.SpyWareItems.Remove(itm);
+            ctx.BShopItems.Remove(itm);
             // else ACCESS DENIED
         }
 

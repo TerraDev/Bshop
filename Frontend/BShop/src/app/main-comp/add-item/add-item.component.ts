@@ -7,7 +7,6 @@ import { ItemsService } from 'src/app/shared/items.service';
 @Component({
   selector: 'app-add-item',
   templateUrl: './add-item.component.html',
-  styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
 

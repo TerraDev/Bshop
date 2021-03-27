@@ -7,3 +7,12 @@ F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\BShop
 F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\BShop.Model.csproj.CoreCompileInputs.cache
 F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\BShop.Model.dll
 F:\Behdad2\Projects\ASP CORE\SpyWire\SpyWire.Model\obj\Debug\netcoreapp3.1\BShop.Model.pdb
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\bin\Debug\netcoreapp3.1\BShop.Model.deps.json
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\bin\Debug\netcoreapp3.1\BShop.Model.dll
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\bin\Debug\netcoreapp3.1\BShop.Model.pdb
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\obj\Debug\netcoreapp3.1\BShop.Model.csprojAssemblyReference.cache
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\obj\Debug\netcoreapp3.1\BShop.Model.AssemblyInfoInputs.cache
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\obj\Debug\netcoreapp3.1\BShop.Model.AssemblyInfo.cs
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\obj\Debug\netcoreapp3.1\BShop.Model.csproj.CoreCompileInputs.cache
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\obj\Debug\netcoreapp3.1\BShop.Model.dll
+F:\Behdad2\Projects\ASP CORE\BShop\BShop.Model\obj\Debug\netcoreapp3.1\BShop.Model.pdb

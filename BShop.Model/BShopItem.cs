@@ -15,15 +15,13 @@ namespace BShop.Model
         public String Name { get; set; }
         public String Price { get; set; }
         public String Type { get; set; } //a filter of some sort
-
+        public Int16 Amount { get; set; }
         public String Description { get; set; }
 
-        //public String OwnerID { get; set; }
-        //[ForeignKey("OwnerID")]
-        //public virtual User Owner { get; set; }
+        public String OwnerID { get; set; }
+        [ForeignKey("OwnerID")]
+        public virtual ApplicationUser Owner { get; set; }
 
-        public String TransID { get; set; }
-        [ForeignKey("TransID")]
-        public virtual Transaction Trans { get; set; }
+        public virtual ICollection<CartItem> CartItems { get; set; }
     }
 }

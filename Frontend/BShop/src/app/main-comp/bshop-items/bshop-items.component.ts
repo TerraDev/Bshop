@@ -6,7 +6,6 @@ import { ItemsService } from 'src/app/shared/items.service';
 @Component({
   selector: 'app-bshop-items',
   templateUrl: './bshop-items.component.html',
-  styleUrls: ['./bshop-items.component.css']
 })
 
 export class BShopItemsComponent implements OnInit {

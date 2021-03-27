@@ -14,17 +14,18 @@ namespace BShop.Model
         public String Fee { get; set; }
         public String CreditNum { get; set; }
 
-        //public String BuyerID { get; set; }
-        //[ForeignKey("BuyerID")]
-        //[InverseProperty("Bought")]
-        //public virtual User Buyer { get; set; }
+        public String BuyerID { get; set; }
+        [ForeignKey("BuyerID")]
+        public virtual ApplicationUser Buyer { get; set; }
 
         //public String SellerID { get; set; }
         //[ForeignKey("SellerID")]
         //[InverseProperty("Sold")]
-        //public virtual User Seller { get; set; }
+        //public virtual ApplicationUser Seller { get; set; }
 
-        public ICollection<BShopItem> SoldItems { get; set; }
+        public String CartID { get; set; }
+        [ForeignKey("CartID")]
+        public virtual ShoppingCart ShoppingCart { get; set; }
 
         public DateTime TransactionTime { get; set; }
     }
