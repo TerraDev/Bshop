@@ -1,4 +1,6 @@
 ﻿using BShop.Service.TransactionRepository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace BShop.Controllers
 {
-    [Route("api/Purchase")]
+    [Route("Purchase")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionRepository transactionRepository;
@@ -20,7 +23,7 @@ namespace BShop.Controllers
         }
 
         //api for purchasing items
-        [HttpPut("/{id}")]
+        [HttpPut]
         public async Task<IActionResult> Purchase()//input is json array object
         {
             var x = transactionRepository.MakeTransaction(null, null);

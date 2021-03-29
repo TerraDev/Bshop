@@ -21,6 +21,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using BShop.Service.TransactionRepository;
+using BShop.Service.UserRepository;
 
 namespace BShop
 {
@@ -36,7 +37,7 @@ namespace BShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<AppSettings>(Configuration.GetSection("ApplicationSettings"));
+            services.Configure<JWTConfig>(Configuration.GetSection("JWTConfig"));
 
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(
@@ -45,8 +46,13 @@ namespace BShop
             services.AddIdentityCore<ApplicationUser>()
                 .AddEntityFrameworkStores<AppDbContext>();
 
+            // services.AddDefaultIdentity<ApplicationUser>(options=> //or <IdentityUser>
+            //options.SignIn.RequireConfirmedAccount = true)
+            //  .AddEntityFrameworkStores<AppDbContext>();
+            // --> add package Microsoft.AspNetCore.Identity.UI
+
             services.AddScoped<IitemRepository, ItemRepository>();
-            //services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             services.Configure<IdentityOptions>(options =>
@@ -60,32 +66,62 @@ namespace BShop
             services.AddControllers();
 
             services.AddSwaggerGen(
-            swagger => swagger.SwaggerDoc(
-            "v1", new OpenApiInfo { Title = "BShop API" }));
+            swagger => {
+                swagger.SwaggerDoc(
+                "v1", new OpenApiInfo { Title = "BShop API" });
+
+                swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Scheme = "bearer",
+                    Description = "Please insert JWT token into field"
+                });
+                swagger.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                {
+
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                    },
+                    new string[] { }
+                  }
+                });
+            });
 
             services.AddCors();
 
             //Jwt Authentication
 
-            var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JWT_Secret"].ToString());
+            var key = Encoding.UTF8.GetBytes(Configuration["JWTConfig:JWT_Secret"].ToString());
 
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x => {
-                x.RequireHttpsMetadata = false;
-                x.SaveToken = false;
+                //x.RequireHttpsMetadata = false;
+                var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:JWT_Secret"]);
+                x.SaveToken = true;
                 x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false,
-                    ClockSkew = TimeSpan.Zero
+                    ValidateLifetime = true,
+                    RequireExpirationTime=false
+                    //ClockSkew = TimeSpan.Zero
                 };
             });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

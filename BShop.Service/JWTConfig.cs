@@ -4,8 +4,8 @@ using System.Text;
 
 namespace BShop.Service
 {
-    public class AppSettings
+    public class JWTConfig
     {
-        public string JWT_Secret { get; set; }
+        public String JWT_Secret { get; set; }
     }
 }

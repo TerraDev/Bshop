@@ -17,6 +17,7 @@ namespace BShop.Infrastructure.Migrations
 								@cartItems [UserDefCartItems] readonly,
 								@creditnum nvarchar(30),
 								@BuyerID nvarchar(50),
+								@errMessage nvarchar(50) = '' out,
 								@result bit = 0 out
 								)
 								as begin
@@ -25,7 +26,6 @@ namespace BShop.Infrastructure.Migrations
 								BEGIN TRY
 									BEGIN TRANSACTION BUY
 										declare @Fee int
-
 										--calculate price and deduct items
 										Update dbo.BShopItems
 										set BShopItems.Amount = (BShopItems.Amount - cI2.amount), 
@@ -47,6 +47,7 @@ namespace BShop.Infrastructure.Migrations
 												ROLLBACK TRANSACTION BUY
 												--print('escape!')
 												set @result = 0;
+												set @errMessage = 'not enough items in stock';
 											end
 										else
 											begin
@@ -54,31 +55,28 @@ namespace BShop.Infrastructure.Migrations
 												*/
 												--print('hit!1')
 												-- insert transaction data
-												declare @TmpID1 int = FLOOR(RAND()*1000000)
 
 												insert
-												into dbo.Transactions (TransID,TransactionTime,CreditNum, Fee, BuyerID) --no cartID
+												into dbo.Transactions (TransactionTime,CreditNum, Fee, BuyerID) --no cartID
 												values
 												(
-												@TmpID1,
 												GETDATE(),
 												@creditnum,
 												@Fee,
 												@BuyerID
-												)
+												);
 
-												--print('hit!2')
-
-												declare @TmpID2 int = FLOOR(RAND()*1000000)
-
+												declare @TmpID1 nvarchar(50) = SCOPE_IDENTITY();
 												-- insert shopping data
 												insert
-												into dbo.shoppingCarts (CartID,TransID,TotalCost)
-												values (@TmpID2,@TmpID1,@Fee)
+												into dbo.shoppingCarts (TransID,TotalCost)
+												values (@TmpID1,@Fee)
 												--print('hit!3');
+												
+												set @TmpID1 = SCOPE_IDENTITY();
 
 												insert into dbo.CartItems (BShopItemID,ShoppingCartID,Amount)
-												select itemID,@TmpID2,amount
+												select itemID,@TmpID1,amount
 													from @cartItems
 
 												--print('hit!4')
@@ -89,7 +87,9 @@ namespace BShop.Infrastructure.Migrations
 								BEGIN CATCH
 									IF @@TRANCOUNT > 0
 										ROLLBACK TRANSACTION BUY
-									set @result = 0
+									set @result = 0;
+									set @errMessage= ERROR_MESSAGE();
+									THROW;
 									--print(CONVERT(varchar(20), ERROR_NUMBER()) + ' ,  ' + ERROR_MESSAGE())
 								END CATCH
 								end";

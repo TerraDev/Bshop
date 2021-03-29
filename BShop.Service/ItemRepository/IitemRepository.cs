@@ -10,8 +10,9 @@ namespace BShop.Service.ItemRepository
     {
         List<ItemViewModel> GetAllItems();
         ItemViewModel GetItem(String id);
-        void CreateItem(ItemViewModel Item);
-        void UpdateItem(String id, ItemViewModel Item);
+        String GetOwnerId(string itemID);
+        void CreateItem(ItemViewModel Item, string UserId);
+        ItemViewModel UpdateItem(ItemViewModel Item);
         void DeleteItem(String id);
         Task<bool> SaveChangesAsync();
     }

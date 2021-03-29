@@ -6,5 +6,7 @@ namespace BShop.ViewModel
 {
     public class ShoppingCartViewModel
     {
+        public string CartItem;
+        public int amount;
     }
 }

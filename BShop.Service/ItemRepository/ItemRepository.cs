@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BShop.Infrastructure;
 using BShop.Model;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace BShop.Service.ItemRepository
 {
@@ -20,66 +22,75 @@ namespace BShop.Service.ItemRepository
         public List<ItemViewModel> GetAllItems()
         {
             List<ItemViewModel> Livm = new List<ItemViewModel>();
-            foreach(BShopItem SWI in ctx.BShopItems)
+            var items = ctx.BShopItems.Include(item => item.Owner).ToList();
+            foreach(BShopItem Item in items)
             {
                 Livm.Add(
-                    new ItemViewModel
-                    {
-                        Id = SWI.Id,
-                        Name = SWI.Name,
-                        Price = SWI.Price,
-                        Description = SWI.Description,
-                        Type = SWI.Type,
-                        //OwnerName = SWI.Owner?.Username
-                    }) ;
+                new ItemViewModel
+                {
+                    Id = Item.Id,
+                    Name = Item.Name,
+                    Price = Item.Price,
+                    Description = Item.Description,
+                    Type = Item.Type,
+                    Amount = Item.Amount,
+                    OwnerName = Item.Owner?.UserName
+                }) ;
             }
             return Livm;
         }
 
         public ItemViewModel GetItem(string id)
         {
-            BShopItem SWI = ctx.BShopItems.Find(id);
+            BShopItem ShopItem = ctx.BShopItems.Where(item => item.Id==id).Include(item => item.Owner
+            ).FirstOrDefault(item=> item.Id == id);//.sin;
+            if (ShopItem == null) return null;
+
             return new ItemViewModel
             {
-                Id = SWI.Id,
-                Name = SWI.Name,
-                Price = SWI.Price,
-                Description = SWI.Description,
-                Type = SWI.Type,
-                //OwnerName = SWI.Owner.Username
+                Id = ShopItem.Id,
+                Name = ShopItem.Name,
+                Price = ShopItem.Price,
+                Description = ShopItem.Description,
+                Type = ShopItem.Type,
+                Amount = ShopItem.Amount,
+                OwnerName = ShopItem.Owner.UserName
             };
         }
 
-        public void CreateItem(ItemViewModel Item)
+        public void CreateItem(ItemViewModel Item,String UserId)
         {
-            //get current user and other stuff...
             ctx.BShopItems.Add(new BShopItem
             {
                 Name = Item.Name,
                 Price = Item.Price,
                 Type = Item.Type,
                 Description = Item.Description,
-                //Owner = CurrentUser
+                OwnerID = UserId
             });
         }
 
-        public void UpdateItem(string id, ItemViewModel Item)
+        public ItemViewModel UpdateItem(ItemViewModel Item)
         {
-            BShopItem SWI = ctx.BShopItems.Find(id);
-            SWI.Name = Item.Name;
-            SWI.Price = Item.Price;
-            SWI.Type = Item.Type;
-            SWI.Description = Item.Description;
+            BShopItem Shopitem = ctx.BShopItems.Find(Item.Id);
+            if (Shopitem == null)
+                return null;
+            Shopitem.Name = Item.Name;
+            Shopitem.Price = Item.Price;
+            Shopitem.Type = Item.Type;
+            Shopitem.Description = Item.Description;
+            Shopitem.Amount = Item.Amount;
+            return Item;
         }
 
         public void DeleteItem(string id)
         {
-            BShopItem itm = ctx.BShopItems.Find(id);
-            //get id of current user
-            //if currentUser.Id==Itm.Owner.Id
-            //then ->
-            ctx.BShopItems.Remove(itm);
-            // else ACCESS DENIED
+            ctx.BShopItems.Remove(ctx.BShopItems.Find(id));
+        }
+
+        public string GetOwnerId(string itemID)
+        {
+            return ctx.BShopItems.Find(itemID)?.OwnerID;
         }
 
         public async Task<bool> SaveChangesAsync()
@@ -89,6 +100,5 @@ namespace BShop.Service.ItemRepository
             else
                 return false;
         }
-
     }
 }

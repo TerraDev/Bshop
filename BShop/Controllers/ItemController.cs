@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BShop.Service.ItemRepository;
 using BShop.ViewModel;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+//using Microsoft.AspNetCore.Authentication;
+//using Microsoft.AspNetCore.Http;
 
 namespace BShop.Controllers
 {
@@ -34,34 +38,55 @@ namespace BShop.Controllers
         public ActionResult<List<ItemViewModel>> GetAll()
         {
             List<ItemViewModel> Livm = itemRepo.GetAllItems();
-
-            //if (Livm != null)
                 return Ok(Livm);
-            //else
-            //    return NotFound();
         }
 
         [HttpPost("Create")]
-        public async Task PostItem(ItemViewModel IVM)
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> PostItem(ItemViewModel IVM)
         {
-            itemRepo.CreateItem(IVM);
+            string UserId = this.User.Claims.First(i => i.Type == "UserId").Value;
+            itemRepo.CreateItem(IVM,UserId);//success or not? return ok or unauthorized or bad request or what?
             await itemRepo.SaveChangesAsync();
+            return Ok();
         }
 
-        [HttpPut("Update/{id}")]
-        public async Task UpdateItem(String id, ItemViewModel IVM)
+        [HttpPut("Update")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> UpdateItem(ItemViewModel IVM)
         {
-            itemRepo.UpdateItem(id, IVM);
-            await itemRepo.SaveChangesAsync();
+           string OwnerId = itemRepo.GetOwnerId(IVM.Id);
+
+           if(OwnerId == null) 
+                return NotFound("Item does not exist");
+        
+            if(this.User.Claims.First(i => i.Type == "UserId").Value == OwnerId)
+            {
+                itemRepo.UpdateItem(IVM);
+                await itemRepo.SaveChangesAsync();
+                return Ok();
+            }
+            else return Forbid();
         }
 
         [HttpDelete("Delete/{id}")]
-        public async Task DeleteItem(String id)
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> DeleteItem(String id)
         {
-            itemRepo.DeleteItem(id);
-            await itemRepo.SaveChangesAsync();
+            string OwnerId = itemRepo.GetOwnerId(id);
+
+            if (OwnerId == null)
+                return NotFound("Item does not exist");
+
+            if (this.User.Claims.First(i => i.Type == "UserId").Value == OwnerId)
+            {
+                itemRepo.DeleteItem(id);
+                await itemRepo.SaveChangesAsync();
+                return Ok();
+            }
+            else return Forbid();
         }
 
-        //public asyn Task SearchItem
+        //public async Task SearchItem
     }
 }

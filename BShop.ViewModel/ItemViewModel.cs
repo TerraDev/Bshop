@@ -11,7 +11,7 @@ namespace BShop.ViewModel
         public String Price { get; set; }
         public String Type { get; set; } //a filter of some sort
         public String Description { get; set; }
-
+        public short Amount { get; set; }
         public String OwnerName { get; set; }
     }
 }
