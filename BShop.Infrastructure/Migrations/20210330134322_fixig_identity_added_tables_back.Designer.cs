@@ -4,14 +4,16 @@ using BShop.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BShop.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210330134322_fixig_identity_added_tables_back")]
+    partial class fixig_identity_added_tables_back
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,14 +34,13 @@ namespace BShop.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OwnerID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
@@ -56,7 +57,7 @@ namespace BShop.Infrastructure.Migrations
                     b.Property<string>("BShopItemID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("ShoppingCartID")
+                    b.Property<int>("ShoppingCartID")
                         .HasColumnType("int");
 
                     b.Property<short>("Amount")
@@ -71,7 +72,7 @@ namespace BShop.Infrastructure.Migrations
 
             modelBuilder.Entity("BShop.Model.ShoppingCart", b =>
                 {
-                    b.Property<int?>("CartID")
+                    b.Property<int>("CartID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -97,14 +98,14 @@ namespace BShop.Infrastructure.Migrations
                     b.Property<string>("BuyerID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("CartID")
+                    b.Property<int>("CartID")
                         .HasColumnType("int");
 
                     b.Property<string>("CreditNum")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Fee")
-                        .HasColumnType("int");
+                    b.Property<string>("Fee")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("TransactionTime")
                         .HasColumnType("datetime2");
@@ -114,8 +115,7 @@ namespace BShop.Infrastructure.Migrations
                     b.HasIndex("BuyerID");
 
                     b.HasIndex("CartID")
-                        .IsUnique()
-                        .HasFilter("[CartID] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Transactions");
                 });
@@ -368,7 +368,9 @@ namespace BShop.Infrastructure.Migrations
 
                     b.HasOne("BShop.Model.ShoppingCart", "ShoppingCart")
                         .WithOne("Transaction")
-                        .HasForeignKey("BShop.Model.Transaction", "CartID");
+                        .HasForeignKey("BShop.Model.Transaction", "CartID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Buyer");
 

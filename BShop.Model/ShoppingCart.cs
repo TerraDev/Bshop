@@ -10,13 +10,14 @@ namespace BShop.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public String CartID { get; set; }
+        public int? CartID { get; set; }
 
         public ICollection<CartItem> CartItems { get; set; }
 
-        public string TransID { get; set; }
+        public int TransID { get; set; }
         public virtual Transaction Transaction { get; set; }
 
+        [Required]
         public float TotalCost {get; set;}
     }
 }

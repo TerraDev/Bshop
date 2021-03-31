@@ -9,7 +9,8 @@ namespace BShop.Model
     public class CartItem
     {
         [Key]
-        public String ShoppingCartID;
+        public int? ShoppingCartID;
+
         [ForeignKey("ShoppingCartID")]
         public virtual ShoppingCart ShoppingCart { get; set; }
 
@@ -18,6 +19,7 @@ namespace BShop.Model
         [ForeignKey("BShopItemID")]
         public virtual BShopItem ShopItem { get; set; }
 
-        public Int16 Amount { get; set; }
+        [Required]
+        public short Amount { get; set; }
     }
 }

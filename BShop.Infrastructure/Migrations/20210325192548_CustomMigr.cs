@@ -66,7 +66,7 @@ namespace BShop.Infrastructure.Migrations
 												@BuyerID
 												);
 
-												declare @TmpID1 nvarchar(50) = SCOPE_IDENTITY();
+												declare @TmpID1 integer = SCOPE_IDENTITY();
 												-- insert shopping data
 												insert
 												into dbo.shoppingCarts (TransID,TotalCost)

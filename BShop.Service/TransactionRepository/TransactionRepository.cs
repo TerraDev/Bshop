@@ -20,32 +20,52 @@ namespace BShop.Service.TransactionRepository
             ctx = _ctx;
         }
 
-        public bool MakeTransaction(ShoppingCartViewModel Cart, TransactionViewModel Trans)
+        public async Task<PurchaseResult> MakeTransactionAsync(TransactionViewModel Trans, string UserId)
         {
-            string creditnum = "5555555555555555";
-            string BuyerID = "97682373-10b6-4dd3-8dd9-40804e686e33";
-            Boolean PurchaseSuccessful = false;
-            string ErrMessage = "";
-            IEnumerable<ShoppingCartViewModel> Carttest = new List<ShoppingCartViewModel>() {
-                new ShoppingCartViewModel{CartItem="3", amount=1},
-                new ShoppingCartViewModel{CartItem="2", amount=2},
-                new ShoppingCartViewModel{CartItem="1", amount=1}
-            };
+            //bool PurchaseSuccessful = false;
+            //string ErrMessage = "";
 
             DataTable CartTable = new DataTable();
             CartTable.Columns.Add("itemID");
             CartTable.Columns.Add("amount");
-            foreach (var cart in Carttest)
+            foreach (var cart in Trans.ShoppingCarts)
             {
                 CartTable.Rows.Add(cart.CartItem, cart.amount);
             }
 
-            SqlParameter sqlparameter = new SqlParameter("@cartItems",CartTable);
-            sqlparameter.TypeName = "dbo.UserDefCartItems";
-            var x = ctx.Database.ExecuteSqlInterpolated($@"exec purchase {sqlparameter}, {creditnum},
-                 {BuyerID},{ErrMessage} output, {PurchaseSuccessful} output");
+            SqlParameter sqlparameterTable = new SqlParameter("@cartItems",CartTable);
+            sqlparameterTable.TypeName = "dbo.UserDefCartItems";
 
-            return PurchaseSuccessful;
+            SqlParameter sqlparameterErrMessage = new SqlParameter
+            {
+                ParameterName = "@errMessage",
+                SqlDbType = SqlDbType.NVarChar,
+                Value = "",
+                Size= 400,
+                Direction = ParameterDirection.Output
+            };
+
+            SqlParameter IsSuccessful = new SqlParameter
+            {
+                ParameterName = "@result",
+                SqlDbType = SqlDbType.Bit,
+                Value = false,
+                Direction = ParameterDirection.Output
+            };
+
+            try
+            {
+                /*var x = */
+                await ctx.Database.ExecuteSqlInterpolatedAsync($@"exec purchase {sqlparameterTable}, {Trans.CreditNum},
+                {UserId},{sqlparameterErrMessage} output, {IsSuccessful} output");
+            }
+            catch { }
+
+            return new PurchaseResult 
+            { 
+                ErrorMessage = sqlparameterErrMessage?.Value?.ToString(),
+                purchaseSuccessful = (bool)IsSuccessful.Value
+            };
         }
 
         public async Task<bool> SaveChangesAsync()

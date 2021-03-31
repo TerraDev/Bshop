@@ -4,14 +4,16 @@ using BShop.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BShop.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210330133637_fixingIdentity")]
+    partial class fixingIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,14 +34,13 @@ namespace BShop.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OwnerID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
@@ -49,75 +50,6 @@ namespace BShop.Infrastructure.Migrations
                     b.HasIndex("OwnerID");
 
                     b.ToTable("BShopItems");
-                });
-
-            modelBuilder.Entity("BShop.Model.CartItem", b =>
-                {
-                    b.Property<string>("BShopItemID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("ShoppingCartID")
-                        .HasColumnType("int");
-
-                    b.Property<short>("Amount")
-                        .HasColumnType("smallint");
-
-                    b.HasKey("BShopItemID", "ShoppingCartID");
-
-                    b.HasIndex("ShoppingCartID");
-
-                    b.ToTable("CartItems");
-                });
-
-            modelBuilder.Entity("BShop.Model.ShoppingCart", b =>
-                {
-                    b.Property<int?>("CartID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<float>("TotalCost")
-                        .HasColumnType("real");
-
-                    b.Property<int>("TransID")
-                        .HasColumnType("int");
-
-                    b.HasKey("CartID");
-
-                    b.ToTable("shoppingCarts");
-                });
-
-            modelBuilder.Entity("BShop.Model.Transaction", b =>
-                {
-                    b.Property<int>("TransID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("BuyerID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("CartID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CreditNum")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Fee")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("TransactionTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("TransID");
-
-                    b.HasIndex("BuyerID");
-
-                    b.HasIndex("CartID")
-                        .IsUnique()
-                        .HasFilter("[CartID] IS NOT NULL");
-
-                    b.ToTable("Transactions");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -341,40 +273,6 @@ namespace BShop.Infrastructure.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("BShop.Model.CartItem", b =>
-                {
-                    b.HasOne("BShop.Model.BShopItem", "ShopItem")
-                        .WithMany("CartItems")
-                        .HasForeignKey("BShopItemID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BShop.Model.ShoppingCart", "ShoppingCart")
-                        .WithMany("CartItems")
-                        .HasForeignKey("ShoppingCartID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ShopItem");
-
-                    b.Navigation("ShoppingCart");
-                });
-
-            modelBuilder.Entity("BShop.Model.Transaction", b =>
-                {
-                    b.HasOne("BShop.Model.ApplicationUser", "Buyer")
-                        .WithMany()
-                        .HasForeignKey("BuyerID");
-
-                    b.HasOne("BShop.Model.ShoppingCart", "ShoppingCart")
-                        .WithOne("Transaction")
-                        .HasForeignKey("BShop.Model.Transaction", "CartID");
-
-                    b.Navigation("Buyer");
-
-                    b.Navigation("ShoppingCart");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -424,18 +322,6 @@ namespace BShop.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("BShop.Model.BShopItem", b =>
-                {
-                    b.Navigation("CartItems");
-                });
-
-            modelBuilder.Entity("BShop.Model.ShoppingCart", b =>
-                {
-                    b.Navigation("CartItems");
-
-                    b.Navigation("Transaction");
                 });
 #pragma warning restore 612, 618
         }

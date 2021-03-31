@@ -54,7 +54,7 @@ namespace BShop.Service.ItemRepository
                 Description = ShopItem.Description,
                 Type = ShopItem.Type,
                 Amount = ShopItem.Amount,
-                OwnerName = ShopItem.Owner.UserName
+                OwnerName = ShopItem.Owner?.UserName
             };
         }
 
@@ -66,13 +66,14 @@ namespace BShop.Service.ItemRepository
                 Price = Item.Price,
                 Type = Item.Type,
                 Description = Item.Description,
+                Amount = Item.Amount,
                 OwnerID = UserId
             });
         }
 
-        public ItemViewModel UpdateItem(ItemViewModel Item)
+        public ItemViewModel UpdateItem(ItemViewModel Item, string id)
         {
-            BShopItem Shopitem = ctx.BShopItems.Find(Item.Id);
+            BShopItem Shopitem = ctx.BShopItems.Find(id);
             if (Shopitem == null)
                 return null;
             Shopitem.Name = Item.Name;

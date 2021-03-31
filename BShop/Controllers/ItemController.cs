@@ -45,24 +45,30 @@ namespace BShop.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> PostItem(ItemViewModel IVM)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             string UserId = this.User.Claims.First(i => i.Type == "UserId").Value;
             itemRepo.CreateItem(IVM,UserId);//success or not? return ok or unauthorized or bad request or what?
             await itemRepo.SaveChangesAsync();
             return Ok();
         }
 
-        [HttpPut("Update")]
+        [HttpPut("Update/{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<IActionResult> UpdateItem(ItemViewModel IVM)
+        public async Task<IActionResult> UpdateItem(ItemViewModel IVM, string id)
         {
-           string OwnerId = itemRepo.GetOwnerId(IVM.Id);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-           if(OwnerId == null) 
+            string OwnerId = itemRepo.GetOwnerId(id);
+
+            if(OwnerId == null) 
                 return NotFound("Item does not exist");
         
             if(this.User.Claims.First(i => i.Type == "UserId").Value == OwnerId)
             {
-                itemRepo.UpdateItem(IVM);
+                itemRepo.UpdateItem(IVM,id);
                 await itemRepo.SaveChangesAsync();
                 return Ok();
             }

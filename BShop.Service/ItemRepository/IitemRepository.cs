@@ -12,7 +12,7 @@ namespace BShop.Service.ItemRepository
         ItemViewModel GetItem(String id);
         String GetOwnerId(string itemID);
         void CreateItem(ItemViewModel Item, string UserId);
-        ItemViewModel UpdateItem(ItemViewModel Item);
+        ItemViewModel UpdateItem(ItemViewModel Item, string id);
         void DeleteItem(String id);
         Task<bool> SaveChangesAsync();
     }

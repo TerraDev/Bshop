@@ -9,8 +9,7 @@ namespace BShop.Service.TransactionRepository
 {
     public interface ITransactionRepository
     {
-        bool MakeTransaction(ShoppingCartViewModel Cart,TransactionViewModel Trans);
-
+        Task<PurchaseResult> MakeTransactionAsync(TransactionViewModel Trans, string UserId);
         Task<bool> SaveChangesAsync();
     }
 }

@@ -10,20 +10,16 @@ namespace BShop.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public String TransID { get; set; }
-        public String Fee { get; set; }
+        public int TransID { get; set; }
+
+        public int Fee { get; set; }
         public String CreditNum { get; set; }
 
         public String BuyerID { get; set; }
         [ForeignKey("BuyerID")]
         public virtual ApplicationUser Buyer { get; set; }
 
-        //public String SellerID { get; set; }
-        //[ForeignKey("SellerID")]
-        //[InverseProperty("Sold")]
-        //public virtual ApplicationUser Seller { get; set; }
-
-        public String CartID { get; set; }
+        public int? CartID { get; set; }
         [ForeignKey("CartID")]
         public virtual ShoppingCart ShoppingCart { get; set; }
 

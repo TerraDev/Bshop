@@ -1,4 +1,5 @@
 ﻿using BShop.Service.TransactionRepository;
+using BShop.ViewModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -23,12 +24,20 @@ namespace BShop.Controllers
         }
 
         //api for purchasing items
-        [HttpPut]
-        public async Task<IActionResult> Purchase()//input is json array object
+        [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<PurchaseResult>> Purchase([FromBody] TransactionViewModel TransVM)
         {
-            var x = transactionRepository.MakeTransaction(null, null);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            string UserId = this.User.Claims.First(i => i.Type == "UserId").Value;
+            var x = await transactionRepository.MakeTransactionAsync(TransVM, UserId);
             await transactionRepository.SaveChangesAsync();
-            return Ok(x);
+            if (x.purchaseSuccessful)
+                return Ok(x);
+            else
+                return BadRequest(x);
         }
     }
 }
